@@ -174,6 +174,10 @@ private class ServiceTest {
 	private static void updateCaseDescriptionWithAccountOwnerName_businessCase_domainLayerInvoked() {
 
 		// Given
+		// The following commented code would return a failure "The Account_Owner_Name__c field is un-writable"
+		// Case businessCaseFailure = new Case();
+		// businessCaseFailure.Account_Owner_Name__c = 'Han Solo';
+
 		// We are using a Hacky mechanism to generate a record with a formula field pre-generated, avoiding the "The XX field is un-writable" error when we try to assign a
 		// value to a formula field in Apex. In this case we are generating the object in the JSON format with the formula value added to it, and then deserializing the JSON
 		String ownerName = 'Han Solo';
