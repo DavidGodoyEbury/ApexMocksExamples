@@ -53,8 +53,6 @@ private class ServiceTest {
 		Accounts.domainInstance = accountsInstanceMock;
 
 		mocks.startStubbing();
-		// A spy for any Set of Ids is added to the stubbed getByIds method, we could add a spy for a prebuilt Set of
-		// Ids containing prospectAccountId and individualAccountId, but as order on Sets are not guaranteed, it is better to add a spy for any Set
 		mocks.when(accountsSelectorMock.getByIds((Set<Id>) fflib_Match.anyObject())).thenReturn(accountList);
 		mocks.stopStubbing();
 
